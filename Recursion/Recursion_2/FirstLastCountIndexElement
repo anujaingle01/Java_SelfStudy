@@ -1,0 +1,30 @@
+package com.example.Recursion_2;
+public class FirstLastCountIndexElement {
+
+    // Global Constant Varaibles
+    public static int First = -1;                                   // With Public - Trial Practice
+    static int Last = -1;                                           // Without Public - Trial Practice
+    public static void Firstlast(String name,int index, char alpha){
+
+        if(index == name.length()){
+            System.out.println(alpha +" : First Occurance = "+First+" Index");
+            System.out.print(alpha +" : Last Occurance = "+Last+" Index");
+            return;
+        }
+
+        char current_alpha =name.charAt(index);
+        if(current_alpha==alpha) {
+            if (First == -1) {
+                First = index;
+            } else {
+                Last = index;
+            }
+        }
+        Firstlast(name,index+1,alpha);
+    }
+    public static void main(String[] args){
+        String name = "tnaja";
+        System.out.println("String = "+name);
+        Firstlast(name,0,'a');
+    }
+}
