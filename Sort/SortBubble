@@ -1,0 +1,37 @@
+package com.example.Sort;
+public class SortBubble {
+
+    public static void printArr(int arr[]) {
+
+        System.out.print("Bubble Sort = ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+
+    public static void main(String[] args) {
+
+        int arr[]={7,8,3,1,2};
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+
+        for (int i=0;i<arr.length-1;i++){
+            for (int j=0;j< arr.length-1-i ;j++){               //
+                if(arr[j]>arr[j+1]){                            // < == Descending Order
+                    int a=arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=a;
+                }
+            }
+        }
+
+        System.out.print("Bubble Sort = ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+//        printArr(arr);
+    }
+
+}
