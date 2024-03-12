@@ -1,0 +1,63 @@
+package com.example.OOPS;
+
+abstract class Animal{                              // abstract Keyword is must to Base Class
+    abstract void walk();
+    {
+        System.out.println("Animal walks");
+    }
+     abstract void breathe();{
+        System.out.println("Animal can Breathe");
+    }
+    Animal(){
+        System.out.println("Animal Created");
+    }
+}
+
+class Horse extends Animal{
+    Horse(){
+        System.out.println("Horse Created");
+    }
+     void walk(){
+        System.out.println("Horse walks on 4 Legs");
+    }
+     void breathe(){
+        System.out.println("Horse can Breathe");
+    }
+     void eat(){
+        System.out.println("Horse eats Grass");         // New Function Added - Practice work
+     }
+}
+
+class Chicken extends Animal{
+    Chicken(){
+        System.out.println("Chicken Created");
+    }
+     void walk(){
+        System.out.println("Chicken walks on 2 Legs");
+    }
+      void breathe(){
+        System.out.println("Chicken can Breathe");
+    }
+}
+
+
+public class Abstraction {
+    public static void main(String[] args){
+
+//        Animal a1 = new Animal();                    // Animal is Abstracted cannot be Initiated
+
+        Horse h1 = new Horse();            // Calls Default all of Base Class & Some Default of itself Child class
+        System.out.println();
+        h1.walk();
+        System.out.println();
+        h1.breathe();
+        System.out.println();
+
+        Chicken c1 = new Chicken();       // Calls Default all of Base Class & Some Default of itself Child class
+        System.out.println();
+        c1.walk();
+        System.out.println();
+        c1.breathe();
+
+    }
+}
