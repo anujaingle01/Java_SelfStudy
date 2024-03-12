@@ -1,0 +1,46 @@
+package com.example.LinkedListStudy;
+
+import java.util.LinkedList;                // Class = LinkedList
+
+public class LinkedList_StudyTheory {
+    public static void main(String[] args){
+
+        LinkedList <String> fruit = new LinkedList<>();             // First , Last
+
+        System.out.println("Linked List : ");
+        System.out.println();
+        
+        fruit.add("Apple");
+        fruit.add("Mango");
+        fruit.add("Cherry");
+
+        // Add First & Last
+//        fruit.addFirst("Banana");
+//        fruit.addLast("Chickoo");
+
+        // Remove First & Last
+//        fruit.removeFirst();
+//        fruit.removeLast();
+
+        // Get First & Last
+//        System.out.println(fruit.getFirst());
+//        System.out.println(fruit.getLast());
+
+        // Set
+        fruit.set(1,"Many Mangoes");
+        System.out.println(fruit);
+
+        // Size
+        System.out.println("Fruit Size = "+fruit.size());
+
+        // Clear
+        fruit.clear();
+        System.out.println("Clear = "+fruit);
+
+        fruit.add("Grapes");
+
+        System.out.println(fruit);
+
+
+    }
+}
