@@ -1,0 +1,63 @@
+package com.example.ArrayListStudy;
+
+import java.util.ArrayList;                                 // Class = ArrayList
+import java.util.Collections;                               // Class = Collections
+
+public class ArrayList_Study {
+    public static void main(String[] args){
+
+        ArrayList<String> cars = new ArrayList<String>();
+
+        System.out.println("Array List : ");
+        System.out.println();
+
+        cars.add("Volvo");
+        cars.add("BMW");
+        cars.add("Ford");
+        cars.add("Mazda");
+
+        System.out.println("Add = "+cars);                              // Add
+
+        // Sort = Alphabetical Order or Numerical Order
+        Collections.sort(cars);                                         // Sort
+        System.out.println("Sort = "+cars);
+
+        cars.remove(0);
+        System.out.println("Remove = "+cars);                           // Remove
+
+        System.out.println("Get = "+cars.get(2));                       // Get
+
+        cars.set(0,"Honda");
+        System.out.println("Set = "+cars);                              // Set
+
+        System.out.println("Size = "+cars.size());                      // Size
+
+        cars.clear();
+        System.out.println("Clear = "+cars);                            // Clear
+
+        System.out.println("***********************************************************");
+
+        // Extra Study of Adding after Clearing ArrayList
+        cars.add("Volvo, BMW");
+        System.out.println(cars);
+
+        for(String i : cars){                                   // For Each Loop
+            System.out.println(i);
+        }
+
+        ArrayList<String> fruit = new ArrayList<String>();
+        fruit.add("Apple");
+        fruit.add("Mango");
+        fruit.add("Grapes");
+        fruit.add("Cherry, Banana");   // For Study Kept side by side
+        System.out.println(fruit);
+
+        System.out.println("Fruit Size = "+fruit.size());  // Fruit Size = 4
+
+        for(int i=0;i< fruit.size();i++){                  // For Loop
+            System.out.println(fruit.get(i));
+        }
+
+
+    }
+}
