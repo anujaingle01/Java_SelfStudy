@@ -1,0 +1,21 @@
+package com.example.Recursion_3;
+public class CallGuestRecursion {
+
+    public static int callguest(int n){                                    // Need Practice for Loop Flow
+        if(n<=1){
+            return 1;
+        }
+
+        int way1 = callguest(n-1);                                      // Called Single Guest
+        int way2 = ((n-1)*callguest(n-2));                              // Called Paired Guest
+        return way1+way2;
+    }
+
+    public static void main(String[] args){
+
+        int n = 4;
+        System.out.println("No. of Guest : "+n);
+        System.out.print("Possibilities to Call Guest = ");
+        System.out.println(callguest(n));
+    }
+}
