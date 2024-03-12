@@ -1,0 +1,55 @@
+package com.example.Stack;
+
+import java.util.ArrayList;
+import java.util.Stack;
+
+public class Stack_AL {
+    static class Stack{
+        ArrayList<Integer> list = new ArrayList<>();
+
+        public boolean isEmpty(){
+            return list.size() == 0;
+        }
+
+        // push = Adding Data in Stack
+        public void push(int data){
+            list.add(data);
+        }
+
+        // pop = Deleting Data from Stack
+        public int pop(){
+            if(isEmpty()){
+                return -1;
+            }
+            int top = list.remove(list.size()-1);
+            return top;
+        }
+
+        // peek = Getting Data Value from Stack
+        public int peek(){
+            if(isEmpty()){
+                return -1;
+            }
+            return list.get(list.size()-1);
+        }
+
+
+    }
+
+
+
+    public static void main(String[] args){
+    Stack stack = new Stack();
+        // push = Adding Data in Stack
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+
+        while(!stack.isEmpty()){
+            System.out.println(stack.peek());     // peek = Getting Data Value from Stack
+            stack.pop();                          // pop = Deleting Data from Stack
+
+        }
+    }
+}
